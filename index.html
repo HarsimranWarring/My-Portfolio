@@ -1,132 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harsimran Warring - Full Stack Developer & UI/UX Designer portfolio">
     <title>Harsimran Warring - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">HR</a>
+            <a href="#home" class="logo" data-scroll>HW</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#home"     class="nav-link" data-scroll>Home</a></li>
+                <li><a href="#about"    class="nav-link" data-scroll>About</a></li>
+                <li><a href="#skills"   class="nav-link" data-scroll>Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-scroll>Projects</a></li>
+                <li><a href="#contact"  class="nav-link" data-scroll>Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-text animate-slide-up">
+                <p class="hero-greeting">👋 Hello, World!</p>
                 <h1>Hi, I'm <span class="gradient-text">Harsimran</span></h1>
-                <p>Full Stack Developer | UI/UX Designer | Tech Enthusiast</p>
-                <p style="font-size: 14px; color: #64748b;">Building beautiful, responsive web experiences with modern technologies</p>
+                <h2 class="hero-subtitle">
+                    <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Building beautiful, responsive web experiences with modern technologies.
+                    Passionate about clean code and great user interfaces.
+                </p>
                 <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary" data-scroll>
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" data-scroll>
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
                 </div>
-            </div>
-            
-            <div class="hero-image">
-                <div class="avatar-container">
-                    <svg class="isometric-avatar" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background glow -->
-                        <defs>
-                            <radialGradient id="avatarGlow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.3" />
-                                <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0" />
-                            </radialGradient>
-                            <linearGradient id="frontFace" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#3b82f6" />
-                                <stop offset="100%" style="stop-color:#1e40af" />
-                            </linearGradient>
-                            <linearGradient id="topFace" x1="0%" y1="100%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#60a5fa" />
-                                <stop offset="100%" style="stop-color:#3b82f6" />
-                            </linearGradient>
-                            <linearGradient id="sideFace" x1="100%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#1e40af" />
-                                <stop offset="100%" style="stop-color:#1e3a8a" />
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Glow background -->
-                        <circle cx="150" cy="180" r="120" fill="url(#avatarGlow)" />
-                        
-                        <!-- Main character body (isometric cube) -->
-                        <!-- Front face -->
-                        <polygon points="80,100 80,220 170,280 170,160" fill="url(#frontFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        
-                        <!-- Top face -->
-                        <polygon points="80,100 150,60 220,100 170,160" fill="url(#topFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        
-                        <!-- Right face -->
-                        <polygon points="170,160 220,100 220,220 170,280" fill="url(#sideFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        
-                        <!-- Head cube (top) -->
-                        <polygon points="100,70 100,30 150,10 150,50" fill="#60a5fa" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        <polygon points="100,30 120,20 170,40 150,50" fill="#93c5fd" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        <polygon points="150,50 170,40 170,80 150,90" fill="#3b82f6" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        
-                        <!-- Arms -->
-                        <polygon points="80,140 50,160 50,200 80,180" fill="#1e40af" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        <polygon points="220,140 250,160 250,200 220,180" fill="#3b82f6" stroke="#0369a1" stroke-width="2" class="iso-face" />
-                        
-                        <!-- Tech accent lines -->
-                        <line x1="80" y1="160" x2="170" y2="160" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
-                        <line x1="100" y1="130" x2="140" y2="110" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
-                        <line x1="180" y1="130" x2="210" y2="150" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
-                        
-                        <!-- Floating circles -->
-                        <circle cx="60" cy="80" r="8" fill="none" stroke="#0ea5e9" stroke-width="2" class="float-circle" />
-                        <circle cx="240" cy="100" r="6" fill="none" stroke="#0ea5e9" stroke-width="1.5" class="float-circle" />
-                    </svg>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" id="scroll-indicator">
             <span>Scroll to explore</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down bounce"></i>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+                <p class="section-subtitle">Passionate developer crafting digital experiences</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>
+                        I'm a <strong>Full Stack Developer</strong> with a passion for building scalable,
+                        performant web applications. I love turning complex problems into elegant,
+                        user-friendly solutions using modern technologies.
+                    </p>
+                    <p>
+                        When I'm not coding, I enjoy exploring new tech trends, contributing to
+                        open-source projects, and mentoring aspiring developers. I believe in
+                        writing clean, maintainable code that stands the test of time.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag"><i class="fas fa-map-marker-alt"></i> India</span>
+                        <span class="tag"><i class="fas fa-briefcase"></i> Open to Work</span>
+                        <span class="tag"><i class="fas fa-graduation-cap"></i> B.Tech CS</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" data-scroll style="margin-top: 1.5rem; display: inline-flex;">
+                        <i class="fas fa-envelope"></i> Hire Me
+                    </a>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-code"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-desc">Years of Experience</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-num">20+</span>
+                                <span class="stat-desc">Projects Completed</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-num">B.Tech</span>
+                                <span class="stat-desc">Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-num">∞</span>
+                                <span class="stat-desc">Cups of Coffee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">What I Work With</h2>
+                <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+            </div>
+            <div class="skills-categories">
+                <!-- Frontend -->
+                <div class="skill-category fade-in">
+                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon react"><i class="fab fa-react"></i></div>
+                            <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon vue"><i class="fab fa-vuejs"></i></div>
+                            <span class="skill-name">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-category fade-in">
+                    <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+                            <span class="skill-name">Node.js</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon python"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon mongo"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon sql"><i class="fas fa-table"></i></div>
+                            <span class="skill-name">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools & Design -->
+                <div class="skill-category fade-in">
+                    <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Design</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon docker"><i class="fab fa-docker"></i></div>
+                            <span class="skill-name">Docker</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon figma"><i class="fab fa-figma"></i></div>
+                            <span class="skill-name">Figma</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon responsive"><i class="fas fa-mobile-alt"></i></div>
+                            <span class="skill-name">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A selection of projects I'm proud of</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn" aria-label="View live demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HarsimranWarring" class="project-btn" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-featured online store with product catalog, shopping cart,
+                            user authentication, and payment integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn" aria-label="View live demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HarsimranWarring" class="project-btn" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Real-time analytics dashboard with interactive charts, data
+                            visualization, and customizable reporting features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn" aria-label="View live demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HarsimranWarring" class="project-btn" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mobile App</h3>
+                        <p class="project-description">
+                            Cross-platform mobile application with offline support, push
+                            notifications, and seamless UX across iOS and Android.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+            </div>
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info fade-in">
+                    <h3>Let's Talk</h3>
+                    <p>I'm always open to new opportunities and exciting projects. Drop me a message!</p>
+                    <div class="contact-links">
+                        <a href="mailto:warring2075@gmail.com" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-link-text">
+                                <span class="link-label">Email</span>
+                                <span class="link-value">warring2075@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="contact-link-text">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">Harsimran Warring</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/HarsimranWarring" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-link-text">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">HarsimranWarring</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-in">
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="form-success" hidden>
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">HW</span>
+                <p>Building digital experiences, one line at a time.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home"     class="footer-nav-link" data-scroll>Home</a>
+                <a href="#about"    class="footer-nav-link" data-scroll>About</a>
+                <a href="#skills"   class="footer-nav-link" data-scroll>Skills</a>
+                <a href="#projects" class="footer-nav-link" data-scroll>Projects</a>
+                <a href="#contact"  class="footer-nav-link" data-scroll>Contact</a>
+            </div>
             <div class="footer-social">
-                <a href="mailto:warring2075@gmail.com" class="footer-link" aria-label="Email">
+                <a href="mailto:warring2075@gmail.com" class="social-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/HarsimranWarring" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/HarsimranWarring" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2024 Harsimran Warring. Made with <i class="fas fa-heart"></i> and lots of coffee.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/nav.js"></script>
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
