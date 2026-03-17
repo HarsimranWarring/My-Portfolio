@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsimran Warring - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">HR</div>
+            <a href="index.html" class="logo">HR</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <span></span>
@@ -35,8 +37,8 @@
                 <p>Full Stack Developer | UI/UX Designer | Tech Enthusiast</p>
                 <p style="font-size: 14px; color: #64748b;">Building beautiful, responsive web experiences with modern technologies</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
             
@@ -106,163 +108,25 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>Hello! I'm a passionate full-stack developer with a love for creating beautiful and functional web applications. With expertise in modern web technologies, I build solutions that are not just visually appealing but also highly efficient.</p>
-                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or learning about the latest technologies in the web development world.</p>
-                </div>
-                <div class="about-stats fade-in">
-                    <div class="stat-card">
-                        <h3>💼 Experience</h3>
-                        <p>3+ years in web development</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>🎓 Education</h3>
-                        <p>Computer Science Background</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>🚀 Projects</h3>
-                        <p>20+ successful projects completed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card fade-in">
-                    <i class="fab fa-html5"></i>
-                    <h3>Frontend</h3>
-                    <p>Building responsive, interactive user interfaces with modern web technologies.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                    </div>
-                </div>
-                <div class="skill-card fade-in">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Backend</h3>
-                    <p>Developing scalable server-side applications and RESTful APIs.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-card fade-in">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsive Design</h3>
-                    <p>Crafting pixel-perfect layouts that work beautifully on every device.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Mobile-First</span>
-                        <span class="skill-tag">Flexbox</span>
-                        <span class="skill-tag">CSS Grid</span>
-                        <span class="skill-tag">Tailwind</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration and real-time inventory management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Interactive dashboard with real-time data visualization and advanced filtering options.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Mobile App</h3>
-                        <p>Native mobile application with seamless UI/UX and offline-first architecture.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">Firebase</span>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
-            <div class="contact-links">
-                <a href="mailto:warring2075@gmail.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>warring2075@gmail.com</p>
-                </a>
-                <a href="https://linkedin.com" class="contact-card" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me</p>
-                </a>
-                <a href="https://github.com/HarsimranWarring" class="contact-card" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>Check my code</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2024 Harsimran Warring. Made with <i class="fas fa-heart"></i> and lots of coffee.</p>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="mailto:warring2075@gmail.com" class="footer-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HarsimranWarring" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Harsimran Warring. Made with <i class="fas fa-heart"></i> and lots of coffee.</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
