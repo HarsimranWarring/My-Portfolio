@@ -42,75 +42,60 @@
             
             <div class="hero-image">
                 <div class="avatar-container">
-                    <div class="avatar">
-                        <!-- Avatar Glow Background -->
-                        <div class="avatar-glow"></div>
+                    <svg class="isometric-avatar" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background glow -->
+                        <defs>
+                            <radialGradient id="avatarGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.3" />
+                                <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0" />
+                            </radialGradient>
+                            <linearGradient id="frontFace" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6" />
+                                <stop offset="100%" style="stop-color:#1e40af" />
+                            </linearGradient>
+                            <linearGradient id="topFace" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#60a5fa" />
+                                <stop offset="100%" style="stop-color:#3b82f6" />
+                            </linearGradient>
+                            <linearGradient id="sideFace" x1="100%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e40af" />
+                                <stop offset="100%" style="stop-color:#1e3a8a" />
+                            </linearGradient>
+                        </defs>
                         
-                        <!-- Hair -->
-                        <div class="avatar-hair"></div>
+                        <!-- Glow background -->
+                        <circle cx="150" cy="180" r="120" fill="url(#avatarGlow)" />
                         
-                        <!-- Head -->
-                        <div class="avatar-head">
-                            <!-- Left Eye -->
-                            <div class="avatar-eye left">
-                                <div class="eye-white">
-                                    <div class="eye-pupil"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Right Eye -->
-                            <div class="avatar-eye right">
-                                <div class="eye-white">
-                                    <div class="eye-pupil"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Eyebrows -->
-                            <div class="avatar-eyebrow left"></div>
-                            <div class="avatar-eyebrow right"></div>
-                            
-                            <!-- Nose -->
-                            <div class="avatar-nose"></div>
-                            
-                            <!-- Mouth -->
-                            <div class="avatar-mouth">
-                                <div class="mouth-top"></div>
-                                <div class="mouth-bottom"></div>
-                            </div>
-                        </div>
+                        <!-- Main character body (isometric cube) -->
+                        <!-- Front face -->
+                        <polygon points="80,100 80,220 170,280 170,160" fill="url(#frontFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
                         
-                        <!-- Neck -->
-                        <div class="avatar-neck"></div>
+                        <!-- Top face -->
+                        <polygon points="80,100 150,60 220,100 170,160" fill="url(#topFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
                         
-                        <!-- Body -->
-                        <div class="avatar-body">
-                            <div class="avatar-shoulder left"></div>
-                            <div class="avatar-shoulder right"></div>
-                        </div>
+                        <!-- Right face -->
+                        <polygon points="170,160 220,100 220,220 170,280" fill="url(#sideFace)" stroke="#0369a1" stroke-width="2" class="iso-face" />
                         
-                        <!-- Left Arm -->
-                        <div class="avatar-arm left">
-                            <div class="upper-arm"></div>
-                            <div class="forearm"></div>
-                            <div class="hand">
-                                <div class="palm"></div>
-                                <div class="thumb"></div>
-                                <div class="fingers"></div>
-                            </div>
-                        </div>
+                        <!-- Head cube (top) -->
+                        <polygon points="100,70 100,30 150,10 150,50" fill="#60a5fa" stroke="#0369a1" stroke-width="2" class="iso-face" />
+                        <polygon points="100,30 120,20 170,40 150,50" fill="#93c5fd" stroke="#0369a1" stroke-width="2" class="iso-face" />
+                        <polygon points="150,50 170,40 170,80 150,90" fill="#3b82f6" stroke="#0369a1" stroke-width="2" class="iso-face" />
                         
-                        <!-- Right Arm -->
-                        <div class="avatar-arm right">
-                            <div class="upper-arm"></div>
-                            <div class="forearm"></div>
-                            <div class="hand">
-                                <div class="palm"></div>
-                                <div class="thumb"></div>
-                                <div class="fingers"></div>
-                            </div>
-                        </div>
-                    </div>
+                        <!-- Arms -->
+                        <polygon points="80,140 50,160 50,200 80,180" fill="#1e40af" stroke="#0369a1" stroke-width="2" class="iso-face" />
+                        <polygon points="220,140 250,160 250,200 220,180" fill="#3b82f6" stroke="#0369a1" stroke-width="2" class="iso-face" />
+                        
+                        <!-- Tech accent lines -->
+                        <line x1="80" y1="160" x2="170" y2="160" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
+                        <line x1="100" y1="130" x2="140" y2="110" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
+                        <line x1="180" y1="130" x2="210" y2="150" stroke="#0ea5e9" stroke-width="1.5" opacity="0.6" class="accent-line" />
+                        
+                        <!-- Floating circles -->
+                        <circle cx="60" cy="80" r="8" fill="none" stroke="#0ea5e9" stroke-width="2" class="float-circle" />
+                        <circle cx="240" cy="100" r="6" fill="none" stroke="#0ea5e9" stroke-width="1.5" class="float-circle" />
+                    </svg>
                 </div>
+            </div>
             </div>
         </div>
         
