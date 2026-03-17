@@ -37,4 +37,16 @@ if (scrollIndicator) {
     });
 }
 
+// ===== CONTACT FORM HANDLER =====
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Show success message and hide form
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+    });
+}
+
 console.log('✅ Portfolio loaded with all animations!');

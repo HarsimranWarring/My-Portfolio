@@ -58,7 +58,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper fade-in">
                     <h3>Send Me a Message</h3>
-                    <form id="contact-form" action="mailto:warring2075@gmail.com" method="POST" enctype="text/plain">
+                    <form id="contact-form" novalidate>
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -79,6 +79,9 @@
                             Send Message <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
+                    <p id="form-success" style="display:none; color: var(--primary-blue); font-weight: 600; text-align: center; margin-top: 20px;">
+                        ✅ Thanks for reaching out! I'll get back to you soon.
+                    </p>
                 </div>
             </div>
         </section>
