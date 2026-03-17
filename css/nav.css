@@ -1,0 +1,16 @@
+/* ===== NAVIGATION STYLES ===== */
+/* Extends the base navbar styles in css/style.css */
+
+/* Active nav indicator animation */
+.nav-link.active {
+    color: var(--primary-blue);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Page transition hint */
+.nav-link {
+    transition: color 0.3s ease, opacity 0.2s ease;
+}

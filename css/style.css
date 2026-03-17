@@ -873,6 +873,121 @@ section {
     }
 }
 
+/* ===== MULTI-PAGE LAYOUT ===== */
+.page-main {
+    margin-top: 70px;
+}
+
+.page-main section:first-child {
+    min-height: calc(100vh - 70px);
+}
+
+/* ===== FOOTER SOCIAL LINKS ===== */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translateY(-4px) scale(1.15);
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form-wrapper {
+    max-width: 640px;
+    margin: 50px auto 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    padding: 50px 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--glass-border);
+}
+
+.contact-form-wrapper h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgba(30, 64, 175, 0.15);
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--dark-text);
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.35);
+    margin-top: 8px;
+}
+
+.form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.5);
+}
+
+@media (max-width: 480px) {
+    .contact-form-wrapper {
+        padding: 35px 25px;
+    }
+}
+
 /* ===== AVATAR ===== */
 .avatar-container {
     position: relative;
