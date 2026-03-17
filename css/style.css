@@ -1294,3 +1294,74 @@ section {
         height: 70px;
     }
 }
+/* ===== 3D ISOMETRIC AVATAR ===== */
+.avatar-container {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.isometric-avatar {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(30, 64, 175, 0.3));
+    animation: iso-rotate 12s infinite linear;
+}
+
+.iso-face {
+    transition: opacity 0.3s ease;
+}
+
+.iso-face:hover {
+    opacity: 0.9;
+}
+
+.accent-line {
+    animation: line-pulse 3s ease-in-out infinite;
+}
+
+.float-circle {
+    animation: float-up 3s ease-in-out infinite;
+}
+
+@keyframes iso-rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes line-pulse {
+    0%, 100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes float-up {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .avatar-container {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .isometric-avatar {
+        max-width: 220px;
+    }
+}
