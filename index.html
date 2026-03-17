@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">HW</div>
+            <div class="logo">HR</div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -19,30 +19,57 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="animate-fade-in">Hi, I'm <span class="gradient-text">Harsimran Warring</span></h1>
-                <p class="animate-fade-in-delay">Information Technology Student | Web Developer | Tech Enthusiast</p>
-                <p class="animate-fade-in-delay-2">Australian Catholic University</p>
-                <div class="hero-buttons animate-fade-in-delay-3">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <h1>Hi, I'm <span class="gradient-text">Harsimran</span></h1>
+                <p>Full Stack Developer | UI/UX Designer | Tech Enthusiast</p>
+                <p style="font-size: 14px; color: #64748b;">Building beautiful, responsive web experiences with modern technologies</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">View My Work</button>
+                    <button class="btn btn-secondary">Get In Touch</button>
                 </div>
             </div>
+            
             <div class="hero-image">
-                <div class="animated-shape"></div>
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <!-- Avatar Hair -->
+                        <div class="avatar-hair"></div>
+                        
+                        <!-- Avatar Head -->
+                        <div class="avatar-head">
+                            <!-- Avatar Eyes -->
+                            <div class="avatar-eyes">
+                                <div class="avatar-eye"></div>
+                                <div class="avatar-eye"></div>
+                            </div>
+                            
+                            <!-- Avatar Mouth -->
+                            <div class="avatar-mouth"></div>
+                        </div>
+                        
+                        <!-- Avatar Body -->
+                        <div class="avatar-body"></div>
+                        
+                        <!-- Avatar Arms -->
+                        <div class="avatar-arms">
+                            <div class="avatar-arm left"></div>
+                            <div class="avatar-arm right"></div>
+                        </div>
+                        
+                        <!-- Hello Emoji -->
+                        <div class="hello-text">👋</div>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <span>Scroll to explore</span>
             <i class="fas fa-chevron-down"></i>
@@ -50,35 +77,26 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text fade-in-on-scroll">
-                    <p>
-                        I'm an International Student pursuing my Bachelor's degree in Information Technology at Australian Catholic University. 
-                        I'm passionate about technology and eager to develop innovative solutions through coding and problem-solving.
-                    </p>
-                    <p>
-                        With a strong foundation in IT fundamentals, I'm constantly learning and exploring new technologies. 
-                        I enjoy building web applications and working on projects that challenge me to grow as a developer.
-                    </p>
-                    <p>
-                        My goal is to leverage my technical skills and creativity to create meaningful digital experiences and contribute to the tech industry.
-                    </p>
+                <div class="about-text">
+                    <p>Hello! I'm a passionate full-stack developer with a love for creating beautiful and functional web applications. With expertise in modern web technologies, I build solutions that are not just visually appealing but also highly efficient.</p>
+                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or learning about the latest technologies in the web development world.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card fade-in-on-scroll">
-                        <h3>Currently</h3>
-                        <p>Bachelor of IT Student</p>
+                    <div class="stat-card">
+                        <h3>💼 Experience</h3>
+                        <p>3+ years in web development</p>
                     </div>
-                    <div class="stat-card fade-in-on-scroll">
-                        <h3>University</h3>
-                        <p>Australian Catholic University</p>
+                    <div class="stat-card">
+                        <h3>🎓 Education</h3>
+                        <p>Computer Science Background</p>
                     </div>
-                    <div class="stat-card fade-in-on-scroll">
-                        <h3>Status</h3>
-                        <p>Open to Opportunities</p>
+                    <div class="stat-card">
+                        <h3>🚀 Projects</h3>
+                        <p>20+ successful projects completed</p>
                     </div>
                 </div>
             </div>
@@ -86,77 +104,62 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-code"></i>
-                    <h3>Programming Languages</h3>
-                    <p>Python, Java, JavaScript, C++, SQL</p>
-                </div>
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-globe"></i>
-                    <h3>Web Development</h3>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>Frontend</h3>
                     <p>HTML, CSS, JavaScript, React, Vue.js</p>
                 </div>
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases</h3>
-                    <p>MySQL, MongoDB, PostgreSQL</p>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Backend</h3>
+                    <p>Node.js, Express, Python, MongoDB</p>
                 </div>
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools & Platforms</h3>
-                    <p>Git, GitHub, VS Code, Figma</p>
-                </div>
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h3>Frameworks</h3>
-                    <p>Node.js, Express, Django</p>
-                </div>
-                <div class="skill-card fade-in-on-scroll">
-                    <i class="fas fa-brain"></i>
-                    <h3>Soft Skills</h3>
-                    <p>Problem Solving, Communication, Teamwork</p>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first, Cross-browser compatibility</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card fade-in-on-scroll">
+                <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Coming Soon</h3>
-                        <p>Your first project will appear here. Stay tuned!</p>
-                        <a href="#contact" class="project-link">Learn More →</a>
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with payment integration and real-time inventory management.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
                 </div>
-                <div class="project-card fade-in-on-scroll">
+                <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Coming Soon</h3>
-                        <p>Your projects showcase will go here once completed.</p>
-                        <a href="#contact" class="project-link">Learn More →</a>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interactive dashboard with real-time data visualization and advanced filtering options.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
                 </div>
-                <div class="project-card fade-in-on-scroll">
+                <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Coming Soon</h3>
-                        <p>Build amazing things and showcase them here!</p>
-                        <a href="#contact" class="project-link">Learn More →</a>
+                        <h3>Mobile App</h3>
+                        <p>Native mobile application with seamless UI/UX and offline-first architecture.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
                 </div>
             </div>
@@ -164,40 +167,33 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-intro fade-in-on-scroll">
-                    I'd love to hear from you! Feel free to reach out for collaborations, opportunities, or just a friendly chat.
-                </p>
-                <div class="contact-links fade-in-on-scroll">
-                    <a href="mailto:warring2075@gmail.com" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>warring2075@gmail.com</p>
-                    </a>
-                    <a href="https://www.linkedin.com/in/harsimran-kaur-warring-3ba2b3326/" target="_blank" class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with me</p>
-                    </a>
-                    <a href="https://github.com/HarsimranWarring" target="_blank" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <h3>GitHub</h3>
-                        <p>Check out my projects</p>
-                    </a>
-                </div>
+            <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:warring2075@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>warring2075@gmail.com</p>
+                </a>
+                <a href="https://linkedin.com" class="contact-card" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+                <a href="https://github.com/HarsimranWarring" class="contact-card" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Check my code</p>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Harsimran Warring. All rights reserved.</p>
-            <p>Crafted with <i class="fas fa-heart"></i> and passion for web development</p>
-        </div>
+        <p>© 2024 Harsimran Warring. Made with <i class="fas fa-heart"></i> and lots of coffee.</p>
     </footer>
 
     <script src="js/script.js"></script>
