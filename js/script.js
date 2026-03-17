@@ -45,7 +45,7 @@ if (hamburger) {
 // Close mobile menu when link is clicked
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        if (navMenu.style.display === 'flex') {
+        if (navMenu && navMenu.style.display === 'flex') {
             navMenu.style.display = 'none';
             hamburger.classList.remove('active');
         }
@@ -56,6 +56,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
+    const navbar = document.querySelector('.navbar');
+    
+    // Add scrolled class to navbar
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -74,23 +82,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    }
-});
-
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
 
 // Prevent layout shift
-body.style.opacity = '0';
+document.body.style.opacity = '0';
 document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
     document.body.style.transition = 'opacity 0.5s ease-in';
